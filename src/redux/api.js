@@ -1,4 +1,4 @@
-export const Url = 'https://foodota-gami130vq-api-asims-projects.vercel.app/api';
+export const Url = 'https://foodota-one.vercel.app/api';
 
 export const setHeaders = () => {
     let authToken = localStorage.getItem('token'); 
