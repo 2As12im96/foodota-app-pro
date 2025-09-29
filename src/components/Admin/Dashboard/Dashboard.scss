@@ -1,0 +1,128 @@
+@use "sass:list"; 
+@use "sass:color";
+$card-bg-colors: #2196f3, #ff9800, #f44336,#4caf50;
+$icon-colors: #2196f3, #ff9800, #f44336, #4caf50;
+$primary-color: #f44336; 
+$secondary-color: #fff; 
+$dark-text-color: #333;
+$alternating-bg-color: #f0f0f0;
+
+.dashboard-content{
+    .overview {
+        .parent-cards {
+            .container , .container-fluid{
+                .row{
+                    @for $i from 1 through list.length($card-bg-colors) {
+                        .col-lg-3:nth-child(#{$i}) {
+                            .child-card {
+                                background-color: list.nth($card-bg-colors, $i);
+                                .card-icon svg {
+                                    color: list.nth($icon-colors, $i);
+                                }
+                            }
+                        }
+                    }
+                    .child-card {
+                        padding: 20px;
+                        border-radius: 15px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        .card-info {
+                            .card-text {
+                                h4 {
+                                    font-size: 22px;
+                                    font-weight: 600;
+                                    margin-bottom: 5px;
+                                    color: #fff;
+                                }
+                                p {
+                                    font-size: 14px;
+                                    color: #fff;
+                                }
+                            }
+                            .card-icon {
+                                width: 50px;
+                                height: 50px;
+                                background-color: #f1f6ff;
+                                svg {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .charts{
+        .container,.container-fluid{
+            .row{
+                .col-lg-8{
+                    background-color: #f1f6ff;
+                    padding: 20px;
+                    border-radius: 15px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
+                .latest_orders {
+                    background-color: $secondary-color;
+                    padding: 20px;
+                    margin-top: 30px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+                    h5 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                        color: $dark-text-color;
+                        border-bottom: 2px solid $primary-color;
+                        padding-bottom: 10px;
+                    }
+                    
+                    .member {
+                        padding: 15px;
+                        margin-bottom: 10px;
+                        border-radius: 8px;
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: $alternating-bg-color;
+                        }
+
+                        span {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $dark-text-color;
+
+                            &:last-child {
+                                font-weight: 700;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+  .dashboard-content{
+      .overview{
+           .parent-cards{
+                .container{
+                    .row{
+                        .child-card{
+                            margin-bottom:20px;
+                            margin-left:3rem;
+                        }
+                    }
+                }
+           }
+      }
+      .charts{
+        .charts-data , .latest_orders {
+            margin-left: 50px;
+            width:100%;
+        }
+      }
+  }
+}

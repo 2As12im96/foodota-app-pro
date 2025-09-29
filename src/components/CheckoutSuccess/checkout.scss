@@ -1,0 +1,66 @@
+.checkout-success-container {
+  margin: 5rem auto;
+
+  .success-icon {
+    background: #4cb200;
+    width: 5rem;
+    height: 5rem;
+    padding: 50px;
+
+    svg {
+      font-size: 3.5rem;
+      color: #fff;
+    }
+  }
+
+  .failed-icon {
+    background: #f00;
+    width: 5rem;
+    height: 5rem;
+    padding: 50px;
+
+    span {
+      font-size: 5rem;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  p {
+    font-size: 3rem;
+  }
+
+  .title-success {
+    color: #4cb200;
+  }
+
+  .title-failed {
+    color: #f00;
+  }
+
+  .message-text {
+    color: #aea8a6;
+    font-size: 2.5rem;
+  }
+
+  .btn-click {
+    margin: 1rem 0;
+
+    button {
+      width: 9rem;
+      padding: 10px;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .btn-success {
+      background: #4cb200;
+    }
+
+    .btn-failed {
+      background: #f00;
+    }
+  }
+}

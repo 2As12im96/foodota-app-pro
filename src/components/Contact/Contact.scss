@@ -1,0 +1,90 @@
+.contact{
+    .contact-info{
+        margin-top:5rem;
+        .item{
+            gap:1.5rem;
+            margin-bottom:3rem;
+            padding:10px;
+            border: 1px solid #dddddd;
+            .icon{
+                width:4rem;
+                height:4rem;
+                background-color:#fff0e6;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:50%;
+                img{
+                    width:2rem;
+                    height:2rem;
+                    object-fit:contain;
+                }
+            }
+            .text{
+                h6{
+                    font-size:1.2rem;
+                    font-weight:600;
+                    color:#333;
+                    margin-bottom:.3rem;
+                }
+                p{
+                    font-size:1rem;
+                    color:#777;
+                    line-height:1.5rem;
+                }
+            }
+        }
+    }
+    .contact-form,
+    .contact-img{
+        margin:6rem 0;
+    }
+    .contact-form{
+        border: 1px solid #dddddd;
+        padding:2rem;
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:1.5rem;
+            input,textarea{
+                padding:1rem;
+                border:1px solid #dddddd;
+                font-size:1rem;
+                color:#333;
+                &:focus{
+                    outline:none;
+                    border:1px solid #ff7f50;
+                }
+            }
+            textarea{
+                resize:none;
+                height:150px;
+            }
+            button{
+                width:150px;
+                padding:.7rem 1rem;
+                border:none;
+                background-color:#FFCC00;
+                color:#fff;
+                font-size:1rem;
+                cursor:pointer;
+                transition:all .3s ease;
+                &:hover{
+                    background-color:#000;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:992px){
+    .contact{
+        .contact-parent{
+            .container{
+                .row{
+                    flex-direction:column-reverse;
+                }
+            }
+        }
+    }
+}
